@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kopi Senja — Artisan Cafe &amp; Roastery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navigasi -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#beranda" class="brand">
+        <span class="brand-icon" aria-hidden="true">&#9749;</span>
+        <span>Kopi Senja</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Navigasi utama">
+        <a href="#beranda">Beranda</a>
+        <a href="#menu">Menu</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#reservasi">Reservasi</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="cart-btn" id="openCartBtn" type="button" aria-label="Buka keranjang pesanan">
+          <span>Keranjang</span>
+          <span class="cart-badge" id="cartCount">0</span>
+        </button>
+        <button class="hamburger" id="hamburgerBtn" type="button" aria-label="Buka menu navigasi" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="beranda">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="pill">Buka Setiap Hari &bull; 07.00 &ndash; 22.00 WIB</span>
+          <h1>Seduhan Hangat di Setiap Senja</h1>
+          <p>
+            Nikmati racikan kopi Nusantara pilihan, teh artisan, dan pastry panggang hangat
+            dalam suasana kafe yang tenang untuk bekerja, bersantai, atau berbincang.
+          </p>
+          <div class="hero-cta">
+            <a href="#menu" class="btn btn-primary">Jelajahi Menu</a>
+            <a href="#reservasi" class="btn btn-outline">Reservasi Meja</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="images/hero-cafe.jpg" alt="Interior hangat Kopi Senja dengan meja kayu dan bar espresso" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Interaktif -->
+    <section class="section" id="menu">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-kicker">Pilihan Favorit</span>
+            <h2>Menu Kopi Senja</h2>
+          </div>
+          <div class="menu-controls">
+            <input
+              type="search"
+              id="searchMenu"
+              class="search-input"
+              placeholder="Cari menu (mis. Latte, Matcha)..."
+              aria-label="Cari menu"
+            />
+          </div>
+        </div>
+
+        <div class="filter-tabs" role="tablist" aria-label="Filter kategori menu">
+          <button class="tab-btn active" data-category="semua" type="button">Semua</button>
+          <button class="tab-btn" data-category="kopi" type="button">Kopi</button>
+          <button class="tab-btn" data-category="non-kopi" type="button">Non-Kopi</button>
+          <button class="tab-btn" data-category="pastry" type="button">Pastry</button>
+        </div>
+
+        <div class="menu-grid" id="menuGrid">
+          <!-- Item menu dirender oleh script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Tentang Kami -->
+    <section class="section section-alt" id="tentang">
+      <div class="container about-grid">
+        <div class="about-media">
+          <img src="images/kopi-croissant.jpg" alt="Secangkir cappuccino dengan latte art dan croissant hangat" />
+        </div>
+        <div class="about-content">
+          <span class="section-kicker">Cerita Kami</span>
+          <h2>Biji Lokal, Sangrai Segar Setiap Pekan</h2>
+          <p>
+            Sejak 2021, Kopi Senja bekerja sama langsung dengan petani kopi di Gayo, Toraja, dan
+            Garut. Setiap cangkir diseduh oleh barista kami dengan takaran presisi agar karakter rasa
+            alami biji kopi tetap terjaga.
+          </p>
+          <div class="highlights">
+            <div class="highlight-item">
+              <strong>100% Arabika Lokal</strong>
+              <span>Dipilih dari panen terbaik Nusantara.</span>
+            </div>
+            <div class="highlight-item">
+              <strong>Pastry Fresh Harian</strong>
+              <span>Dipanggang setiap pagi sebelum kafe buka.</span>
+            </div>
+            <div class="highlight-item">
+              <strong>Wi-Fi &amp; Stopkontak</strong>
+              <span>Nyaman untuk kerja jarak jauh maupun diskusi.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reservasi Meja -->
+    <section class="section" id="reservasi">
+      <div class="container reservation-wrap">
+        <div class="reservation-info">
+          <span class="section-kicker">Kunjungan</span>
+          <h2>Reservasi Meja</h2>
+          <p>
+            Ingin mengadakan pertemuan kecil atau memastikan meja tersedia di akhir pekan?
+            Isi formulir di samping dan tim kami akan menyiapkan tempat terbaik untukmu.
+          </p>
+          <ul class="info-list">
+            <li><strong>Alamat:</strong> Jl. Melati No. 18, Kemang, Jakarta Selatan</li>
+            <li><strong>Jam Buka:</strong> Senin &ndash; Minggu, 07.00 &ndash; 22.00 WIB</li>
+            <li><strong>Telepon:</strong> (021) 555-0192</li>
+          </ul>
+        </div>
+
+        <form class="reservation-form" id="reservationForm" novalidate>
+          <div class="form-group">
+            <label for="resName">Nama Lengkap</label>
+            <input type="text" id="resName" name="resName" placeholder="Contoh: Raka Pratama" required />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="resDate">Tanggal</label>
+              <input type="date" id="resDate" name="resDate" required />
+            </div>
+            <div class="form-group">
+              <label for="resTime">Jam</label>
+              <input type="time" id="resTime" name="resTime" value="16:00" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="resGuests">Jumlah Tamu</label>
+            <select id="resGuests" name="resGuests">
+              <option value="1-2 Orang">1 &ndash; 2 Orang</option>
+              <option value="3-4 Orang" selected>3 &ndash; 4 Orang</option>
+              <option value="5-8 Orang">5 &ndash; 8 Orang</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="resNote">Catatan (Opsional)</label>
+            <textarea id="resNote" name="resNote" rows="2" placeholder="Mis. area dekat jendela atau non-smoking"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Konfirmasi Reservasi</button>
+          <div class="form-feedback" id="reservationFeedback" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Kopi Senja. Dibuat untuk kenyamanan setiap tegukan.</p>
+      <a href="#beranda" class="back-top">Kembali ke atas &uarr;</a>
+    </div>
+  </footer>
+
+  <!-- Drawer Keranjang -->
+  <div class="cart-overlay" id="cartOverlay" hidden></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Keranjang pesanan" aria-hidden="true">
+    <div class="cart-header">
+      <h3>Pesanan Kamu</h3>
+      <button class="icon-close" id="closeCartBtn" type="button" aria-label="Tutup keranjang">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <!-- Daftar item keranjang dirender oleh script.js -->
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>Total</span>
+        <strong id="cartTotal">Rp 0</strong>
+      </div>
+      <button class="btn btn-primary btn-full" id="checkoutBtn" type="button">Pesan Sekarang</button>
+    </div>
+  </aside>
+
+  <!-- Toast Notifikasi -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
